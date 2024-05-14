@@ -27,10 +27,7 @@ module.exports = {
           'to-tl': 'linear-gradient(to top left, var(--tw-gradient-stops))',
           'radial': theme('radialGradient'),
         },
-        'building': "url('../src/image/building.jpg')",
-        'building-night': "url('/src/image/building-night.jpg')",
-        'indomaret': "url('/src/image/indomaret.png')",
-        'ace': "url('/src/image/ace.png')",
+        'building': "url('./portfolio-v2/src/image/building.jpg')",
       }),
       keyframes: {
         wiggle: {
