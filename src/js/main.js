@@ -75,13 +75,17 @@ navLinks.forEach(function(navLink) {
 
 function loadPage(page) {
   $.ajax({
-      url: "../../public/" + page + ".html",
+      url: "public/" + page + ".html",
       cache: false,
       success: function(result) {
         $("#content").html(result); 
           localStorage.setItem('activePage', page); // Menyimpan halaman yang sedang aktif
           window.scrollTo(0, 0);
+      },
+      error: function() {
+        $("#content").html("<p>Halaman tidak ditemukan.</p>");
       }
+      
   });
 }
 
