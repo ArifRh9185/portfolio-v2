@@ -20,18 +20,6 @@ document.addEventListener('DOMContentLoaded', function() {
     toggleSwitch.checked = false;
   }
 });
-// view button
-document.addEventListener("DOMContentLoaded", function() {
-  const button = document.querySelector("#btn-view");
-  button.addEventListener("click", function() {
-    var targetElement = document.querySelector("#base");
-
-    targetElement.scrollIntoView({
-      behavior: "smooth", // Smooth scrolling
-      block: "start" // Mulai elemen di bagian atas viewport
-    });
-  });
-});
 
 
 // Menu button
@@ -75,7 +63,7 @@ navLinks.forEach(function(navLink) {
 
 function loadPage(page) {
   $.ajax({
-      url: "public/" + page + ".html",
+      url: page + ".html",
       cache: false,
       success: function(result) {
         $("#content").html(result); 
