@@ -75,7 +75,7 @@ navLinks.forEach(function(navLink) {
 
 function loadPage(page) {
   $.ajax({
-      url: "../public/" + page + ".html",
+      url: "../../public/" + page + ".html",
       cache: false,
       success: function(result) {
         $("#content").html(result); 
